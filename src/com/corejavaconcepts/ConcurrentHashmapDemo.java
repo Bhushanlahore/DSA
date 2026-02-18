@@ -35,6 +35,8 @@ public class ConcurrentHashmapDemo {
         }
 
         System.out.println("map size: "+map.size());
+
+        System.out.println("map size: "+map.size());
     }
 
 }

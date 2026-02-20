@@ -1,6 +1,8 @@
 package com.practice.javacode;
 
-public class ArraySortedOrNot {
+public class
+
+ArraySortedOrNot {
 
     public static boolean isSorted(int arr[]){
 

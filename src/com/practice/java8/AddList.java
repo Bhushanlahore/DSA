@@ -3,7 +3,9 @@ package com.practice.java8;
 import java.util.Arrays;
 import java.util.List;
 
-public class AddList {
+public class
+
+AddList {
 
     public static void main(String args[]){
 

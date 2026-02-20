@@ -1,6 +1,6 @@
 package com.practice.thread;
 
-public class ThreadDemo extends Thread{
+public class ThreadDemo{
 
     public static void main (String args []){
 
@@ -20,8 +20,8 @@ public class ThreadDemo extends Thread{
 //        Thread thread = new Thread(threadDemo);
 //        thread.start();
 
-        ThreadDemo threadDemo = new ThreadDemo();
-        threadDemo.start();
+//        ThreadDemo threadDemo = new ThreadDemo();
+//        threadDemo.start();
 
         new Thread(()->{
 
@@ -31,10 +31,10 @@ public class ThreadDemo extends Thread{
         }).start();
     }
 
-    @Override
-    public void run() {
-        for(int i=0; i<5; i++){
-             System.out.println(i);
-        }
-    }
+//    @Override
+//    public void run() {
+//        for(int i=0; i<5; i++){
+//             System.out.println(i);
+//        }
+//    }
 }

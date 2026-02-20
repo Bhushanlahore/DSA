@@ -120,5 +120,16 @@ public class Employee {
      empList5.forEach((dept,name)->{
          System.out.println(dept+": "+name);
      });
+
+
+        System.out.println("*******Increase Salary of employee whose salary is less than 20************************");
+        //1
+        employees.stream().filter(e-> e.getSalary() <= 25)
+                .forEach(e-> e.setSalary(e.getSalary() *1.20));
+
+        for(Employee e: employees){
+            System.out.println(e.getName()+" "+e.getSalary()+" "+e.getGender()+" "+e.getDepartment());
+        }
+        //2
     }
 }

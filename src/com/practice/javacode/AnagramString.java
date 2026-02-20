@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class AnagramString {
 
@@ -52,10 +53,24 @@ public class AnagramString {
         }
         return;
     }
+
+    public static void findFirstNonRepeatingChar1(String str) {
+
+    Map<String, Long>  map =  Arrays.stream(str.split("")).collect(Collectors.groupingBy(c->c, LinkedHashMap::new, Collectors.counting()));
+
+    for(Map.Entry<String, Long> entry: map.entrySet()){
+
+        if(entry.getValue() == 1){
+            System.out.println(entry.getKey()+" "+entry.getValue());
+            return;
+        }
+    }
+    }
     public static void main(String args[]){
 
         System.out.println(checkAnangramString1("bhushaan", "hbshanu"));
         System.out.println(checkAnangramString2("bhushana", "hbshanu"));
         findFirstNonRepeatingChar("aabbxccdee");
+        findFirstNonRepeatingChar1("aabbxccdee");
     }
 }

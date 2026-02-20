@@ -31,7 +31,7 @@ public class ConcurrentHashmapDemo {
         //service.awaitTermination(1, TimeUnit.MINUTES);
 
     if(!service.isTerminated()){
-            Thread.sleep(1000);
+            Thread.sleep(2000);
         }
 
         System.out.println("map size: "+map.size());

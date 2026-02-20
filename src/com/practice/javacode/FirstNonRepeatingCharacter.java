@@ -11,11 +11,11 @@ public class FirstNonRepeatingCharacter {
 
         for(char ch: str.toCharArray()){
             if(map.containsKey(ch))
-                map.put(ch, map.get(ch)+1);
-            else
+                map.put(ch, map.getOrDefault(ch, 0)+1);
+            else{
                 map.put(ch, 1);
         }
-
+}
         for(Map.Entry<Character, Integer> entry: map.entrySet()){
 
             if(entry.getValue() == 1){

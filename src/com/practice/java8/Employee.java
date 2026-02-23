@@ -65,9 +65,9 @@ public class Employee {
                 new Employee("Ben", "Finance", 70, "male"));
 
 
+        System.out.println("***********Grouping employee by department. ************************");
      Map<String, List<Employee>> empList = employees.stream().collect(Collectors.groupingBy(e->e.department));
 
-     System.out.println("***********Grouping employee by department. ************************");
      empList.forEach((dept, emp)->{
          System.out.println(dept+":");
          emp.forEach(e-> System.out.print(e.getName()+" "));
@@ -84,7 +84,7 @@ public class Employee {
 
         System.out.println("***********Find the total salary paid for each department ************************");
 
-      Map<String, Double> empList3 = employees.stream().collect(Collectors.groupingBy(Employee::getDepartment, Collectors. summingDouble(Employee::getSalary)));
+      Map<String, Double> empList3 = employees.stream().collect(Collectors.groupingBy(Employee::getDepartment, Collectors.summingDouble(Employee::getSalary)));
 
       empList3.forEach((dept,salary)->{
           System.out.println(dept+" "+salary);
@@ -121,6 +121,15 @@ public class Employee {
          System.out.println(dept+": "+name);
      });
 
+        System.out.println("*******Partitioned By************************");
+        Map<Boolean, List<Employee>> collect = employees.stream().collect(Collectors.partitioningBy(e -> e.getSalary() < 50));
+
+        collect.forEach((key,value)->{
+
+            System.out.print(key+": ");
+            value.forEach(e-> System.out.print(e.getName()+" "));
+            System.out.println();
+        });
 
         System.out.println("*******Increase Salary of employee whose salary is less than 20************************");
         //1

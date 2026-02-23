@@ -20,6 +20,20 @@ public class Person{
         this.gender = gender;
     }
 
+    @Override
+    public boolean equals(Object o) {
+
+        if(this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return Double.compare(salary, person.salary) == 0 && Objects.equals(name, person.name) && Objects.equals(department, person.department) && Objects.equals(gender, person.gender);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(name);
+    }
+
     public String getName() {
         return name;
     }

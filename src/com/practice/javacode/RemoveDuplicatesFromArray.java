@@ -17,6 +17,9 @@ public class RemoveDuplicatesFromArray {
             }
             }
 
+        for(int i=0; i<start; i++){
+            System.out.println(arr[i]);
+        }
         return start+1;
 
     }

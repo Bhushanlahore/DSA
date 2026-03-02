@@ -12,12 +12,13 @@ public class RemoveDigit {
 
         List<String> list = Arrays.asList("123", "1vdd", "345fdr", "12467", "avb", "hjg", "767","45","21","95");
 
+        //remove digit
         List<String> newList = list.stream()
                 .map(s-> s.replaceAll("\\d", ""))
                 .filter(s->!s.isEmpty()).collect(Collectors.toList());
 
         System.out.println(newList);
-
+        //remove all the character (1vdd,345fdr)
         List<Integer> newList2 =   list.stream()
                                 .filter(s-> s.matches("\\d+"))
                                 .map(Integer::parseInt)

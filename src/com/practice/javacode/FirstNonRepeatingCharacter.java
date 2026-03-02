@@ -10,11 +10,9 @@ public class FirstNonRepeatingCharacter {
         Map<Character, Integer> map = new LinkedHashMap<>();
 
         for(char ch: str.toCharArray()){
-            if(map.containsKey(ch))
+
                 map.put(ch, map.getOrDefault(ch, 0)+1);
-            else{
-                map.put(ch, 1);
-        }
+
 }
         for(Map.Entry<Character, Integer> entry: map.entrySet()){
 

@@ -53,8 +53,6 @@ public class Employee {
     public static void main(String[] args) {
         // TODO Auto-generated method stub
 
-
-
         List<Employee> employees = Arrays.asList(new Employee("Alice", "HR", 13, "female"),
                 new Employee("Bob", "IT", 11, "male"),
                 new Employee("Charlie", "HR", 16, "male"),

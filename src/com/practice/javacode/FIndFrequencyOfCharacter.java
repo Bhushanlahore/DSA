@@ -10,13 +10,9 @@ public class FIndFrequencyOfCharacter {
 
         for(char ch: str.toCharArray()) {
                 map.put(ch, map.getOrDefault(ch,0) + 1);
-
         }
-
         map.forEach((ch, no) -> {
-
                 System.out.println(ch+": "+no);
-
         });
     }
 

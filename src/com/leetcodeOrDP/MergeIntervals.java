@@ -11,7 +11,7 @@ public class MergeIntervals {
 
       //  Arrays.sort(intervals, (a,b)->a[0]-b[0]);
 
-        Arrays.sort(intervals, Comparator.comparingInt(a -> a[0]));
+//        Arrays.sort(intervals, Comparator.comparingInt(a -> a[0]));
         //{{1,3},{2,6},{8,15},{12,18},{17,19}}
         List<int[]> result = new ArrayList<>();
         int[] current= intervals[0];
@@ -33,20 +33,17 @@ public class MergeIntervals {
 
     public static void main(String args[]){
 
-       // int intervals[][] = {{1,3},{2,6},{8,15},{12,18},{17,19}};
-        int intervals[][] = {{4,7},{1,4}};
+        int intervals[][] = {{1,3},{2,6},{8,15},{12,18},{17,19}};
+      //  int intervals[][] = {{4,7},{1,4}};
 
 
         int[][] merged = merge(intervals);
 
       //  merge2(intervals);
 
-        System.out.println(merged);
        for(int[] interval : merged){
             System.out.println(Arrays.toString(interval));
         }
-
-       merge2(intervals);
     }
 
     //{{1,3},{2,6},{8,15},{12,18},{17,19}};

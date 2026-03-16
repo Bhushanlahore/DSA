@@ -1,6 +1,7 @@
 package com.leetcodeOrDP;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 //Input: intervals = [[1,2],[2,3],[3,4],[1,3]]
 //Output: 1
@@ -37,7 +38,8 @@ public class eraseOverlapIntervals {
 
     public static int eraseOverlapIntervals2(int[][] intervals) {
 
-        Arrays.sort(intervals, (a, b) -> a[1] - b[1]);
+       // Arrays.sort(intervals, (a, b) -> a[1] - b[1]);
+        Arrays.sort(intervals, Comparator.comparingInt(a -> a[1]));
         // {{1,100},{11,22},{1,11},{2,12}};
         int current = intervals[0][1];
         int output = 0;

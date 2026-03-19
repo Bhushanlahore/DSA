@@ -3,7 +3,7 @@ package com.designpattern.observer;
 public class EmailObserverImpl implements NotificationObserver{
 
    private final StockObserverable stockObserverable;
-   private final String email;
+   private String email;
 
 
    EmailObserverImpl(StockObserverable stockObserverable, String email){

@@ -58,7 +58,9 @@ public class AnagramString {
 
     Map<String, Long>  map =  Arrays.stream(str.split("")).collect(Collectors.groupingBy(c->c, LinkedHashMap::new, Collectors.counting()));
 
-    for(Map.Entry<String, Long> entry: map.entrySet()){
+        str.chars().mapToObj(c -> (char) c).collect(Collectors.groupingBy(c -> c, LinkedHashMap::new, Collectors.counting()));
+
+        for(Map.Entry<String, Long> entry: map.entrySet()){
 
         if(entry.getValue() == 1){
             System.out.println(entry.getKey()+" "+entry.getValue());

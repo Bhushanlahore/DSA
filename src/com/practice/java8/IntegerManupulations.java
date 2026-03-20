@@ -19,7 +19,7 @@ public class IntegerManupulations {
       int secondLargest1 = integerList.stream().distinct().sorted(Comparator.reverseOrder()).skip(1).findFirst().orElse(0);
         System.out.println(secondLargest1);
 
-        System.out.println("===============find smallest largest number from list====================");
+        System.out.println("===============find second smallest largest number from list====================");
         int secondLargest2 = integerList.stream().distinct().sorted().skip(1).findFirst().orElse(-1);
         System.out.println(secondLargest2);
 

@@ -41,7 +41,7 @@ public class MaximumSumOfSubarray {
         for(int i=k; i<arr.length; i++){
             windowSum = windowSum - arr[i-k] + arr[i];
 
-            avgList.add((double) windowSum /k);
+            avgList.add((double) (windowSum /k));
         }
 
         return avgList;

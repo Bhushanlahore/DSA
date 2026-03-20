@@ -11,11 +11,10 @@ public class eraseOverlapIntervals {
     public static int eraseOverlapIntervals(int[][] intervals) {
 
         Arrays.sort(intervals, (a, b)-> a[1]-b[1]);
-
-        for(int[] i: intervals){
-
-            System.out.println(Arrays.toString(i));
-        }
+//        for(int[] i: intervals){
+//
+//            System.out.println(Arrays.toString(i));
+//        }
 
         int[] current = intervals[0];
 

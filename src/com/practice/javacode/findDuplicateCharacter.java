@@ -1,6 +1,9 @@
 package com.practice.javacode;
 
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class findDuplicateCharacter {
 
@@ -20,5 +23,8 @@ public class findDuplicateCharacter {
     public static void main(String args[]){
 
         findDuplicate("programming");
+
+
+
     }
 }

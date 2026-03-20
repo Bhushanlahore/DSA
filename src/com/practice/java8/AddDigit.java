@@ -6,6 +6,8 @@ public class AddDigit {
 
         int digit = 1234;
 
+        System.out.println(String.valueOf(digit));
+
      int sum =  String.valueOf(digit).chars().map(n-> Character.getNumericValue(n)).sum();
 
      int sum2 = String.valueOf(digit).chars().map(Character::getNumericValue).sum();

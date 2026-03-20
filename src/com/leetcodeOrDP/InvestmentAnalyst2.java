@@ -17,7 +17,7 @@ import java.util.Arrays;
 //input1: An integer value N, representing the number of portfolios.
 //input2: An integer array A, representing the risk scores of the
 
-public class InvestmentAnalyst2 {
+public class InvestmentAnalyst2  {
         public static int maxRisk(int[] A, int N) {
 
             if(N <= 1){

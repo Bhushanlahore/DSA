@@ -1,9 +1,6 @@
 package com.corejavaconcepts;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 public class Student {
 
@@ -13,6 +10,20 @@ public class Student {
     Student(int id, String name) {
         this.id = id;
         this.name = name;
+    }
+
+    //Overridng equals and hashcode method
+    @Override
+    public boolean equals(Object o) {
+        if(this == o) return true;
+        if(o == null || getClass() != o.getClass()) return true;
+        Student s = (Student) o;
+        return id == s.id && Objects.equals(name, s.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name);
     }
 
     public static  void main(String args[]){

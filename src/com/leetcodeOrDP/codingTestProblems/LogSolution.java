@@ -10,8 +10,11 @@ public class LogSolution {
         // Sample data (no need for file)
         List<String> logs = Arrays.asList(
                 "90750.191 JOX304 250E ENTRY",
+                "90750.191 MH1244 270E ENTRY",
                 "91081.684 JOX304 260E MAINROAD",
-                "91082.101 THX138 110E ENTRY",
+                "9" +
+                        "1082.101 THX138 110E ENTRY",
+                "90750.191 MH1422 250E EXIT",
                 "91483.251 JOX304 270E MAINROAD",
                 "91873.920 THX138 120E MAINROAD",
                 "91874.493 JOX304 280E EXIT",
@@ -30,6 +33,14 @@ public class LogSolution {
         System.out.println("Detect toll Skipped car"+logFile.detectSkippingCars());
         System.out.println("Peak Highway Uses: "+logFile.peakHighwayUsage());
 
+        System.out.println("======================================New LogFile ============================================");
+
+        NewLogFIle newLogFIle = new NewLogFIle(logs);
+
+        System.out.println("Total Journeys: " + newLogFIle.countJourneys());
+        System.out.println("Total Journeys 2: " + newLogFIle.countJourneys2());
+        System.out.println("Avarage Journey: "+newLogFIle.getAvarageJourneyDistance());
+        System.out.println("Fastest Car: "+newLogFIle.findFastestCar());
 
     }
 }

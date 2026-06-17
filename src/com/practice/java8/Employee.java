@@ -137,6 +137,19 @@ public class Employee {
         for(Employee e: employees){
             System.out.println(e.getName()+" "+e.getSalary()+" "+e.getGender()+" "+e.getDepartment());
         }
-        //2
+
+
+        System.out.println("*******write a Stream to count employees and sort them by salary (descending) and then name (alphabetically)?************************");
+
+           long count = employees.stream().count();
+
+       List<Employee> emp6 = employees.stream().sorted(Comparator.comparing(Employee::getSalary)
+                            .reversed().thenComparing(Employee::getName)).toList();
+
+        for(Employee e: emp6){
+            System.out.println(e.getName()+" "+e.getSalary()+" "+e.getGender()+" "+e.getDepartment());
+        }
+
+        emp6.parallelStream().forEachOrdered(e-> System.out.println(e.getName()+" "+e.getSalary()+" "+e.getGender()+" "+e.getDepartment()));
     }
 }

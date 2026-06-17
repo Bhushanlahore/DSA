@@ -8,7 +8,7 @@ public class BinarySearch {
         int start = 0;
         int end = arr.length-1;
 
-       while(start <= end){
+       while(start < end){
 
            int mid = (start+end)/2;
            if(key == arr[mid]){
@@ -17,7 +17,6 @@ public class BinarySearch {
            }
 
            if(key > arr[mid]){
-
                start = mid+1;
            }else{
                end = mid-1;
@@ -27,8 +26,8 @@ public class BinarySearch {
     }
     public static void main(String args[]){
 
-        int arr[] = {10,20,30,40,50,60,70,80,90};
+        int arr[] = {1,3,5,6, 9,10,23,26,87};
 
-       System.out.println( findElement(arr, 60));
+       System.out.println( findElement(arr, 26));
     }
 }

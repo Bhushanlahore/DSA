@@ -18,6 +18,4 @@ AddList {
 
         System.out.println(list1);
     }
-
-
 }

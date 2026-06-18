@@ -59,8 +59,16 @@ public class Employee {
                 new Employee("Daaaavid", "IT", 31, "male"),
                 new Employee("Eve", "Finance", 20, "female"),
                 new Employee("EAAe", "Finance", 100, "female"),
+                new Employee("AAA", "Finance", 100, "female"),
                 new Employee("Ben", "Finance", 50, "male"),
-                new Employee("Ben", "Finance", 70, "male"));
+                new Employee("Rahul", "Finance", 70, "male"),
+                new Employee("Ben", "Finance", 70, "male"),
+                new Employee("Rahul", "Finance", 70, "male"),
+                new Employee("Shyma", "Finance", 70, "male"));
+
+        System.out.println("***********Second highest salary of employee ************************");
+        double employee = employees.stream().map(Employee::getSalary).sorted(Comparator.reverseOrder()).skip(1).findFirst().orElse(0.0);
+        System.out.println(employee);
 
 
         System.out.println("***********Grouping employee by department. ************************");
@@ -91,7 +99,11 @@ public class Employee {
       System.out.println("***********Group Employee by department and count gender in each department ************************");
 
      Map<String, Map<String, Long>> empList4 = employees.stream().collect(Collectors.groupingBy(Employee::getDepartment, Collectors.groupingBy(Employee::getGender, Collectors.counting())));
-     empList4.forEach((dept, map)->{
+
+        employees.stream().collect(Collectors.groupingBy(e -> e.getDepartment(), Collectors.groupingBy(emp -> emp.getGender(), Collectors.counting())));
+
+
+        empList4.forEach((dept, map)->{
          System.out.println(dept+":");
          map.forEach((gen, count)->{
              System.out.println(gen+":"+count);

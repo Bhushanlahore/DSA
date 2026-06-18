@@ -10,6 +10,8 @@ public class FindLogestString {
 
         Optional<String> str = strings.stream().filter(Objects::nonNull).sorted(Comparator.comparingInt(String::length).reversed()).findFirst();
 
+        String st= strings.stream().filter(Objects::nonNull).max(Comparator.comparingInt(String::length)).orElse("No elemnt found");
+
         System.out.println(str.get());
 
         String longest = "";

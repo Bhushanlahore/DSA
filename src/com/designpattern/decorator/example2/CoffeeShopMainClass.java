@@ -1,8 +1,5 @@
 package com.designpattern.decorator.example2;
 
-import com.designpattern.decorator.BasePizza;
-import com.designpattern.decorator.Pizza;
-
 public class CoffeeShopMainClass {
 
     public static void main(String args[]){

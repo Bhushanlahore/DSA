@@ -67,7 +67,7 @@ public class Employee {
                 new Employee("Shyma", "Finance", 70, "male"));
 
         System.out.println("***********Second highest salary of employee ************************");
-        double employee = employees.stream().map(Employee::getSalary).sorted(Comparator.reverseOrder()).skip(1).findFirst().orElse(0.0);
+        Double employee = employees.stream().map(Employee::getSalary).sorted(Comparator.reverseOrder()).skip(1).findFirst().orElse(null);
         System.out.println(employee);
 
 
